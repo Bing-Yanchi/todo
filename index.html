@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>番茄布丁</title>
+	<link rel="stylesheet" href="css/history.css" type="text/css">
+	<link rel="stylesheet" href="css/mdui.min.css" type="text/css">
+	<script src="js/mdui.min.js"></script>
+</head>
+<body style="margin:0px">
+	<div class="head"></div>
+	<div class="mdui-container">
+		<div class="mdui-typo-display-2">参与内测</div>
+		<p>
+			目前番茄布丁已在开发初期阶段，大体方向现已确定，距离正式发布应该还有一年左右的时间。
+			你可以通过下方的渠道参与番茄布丁的内测：
+		</p>
+
+		<button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#exampleDialog'}">内测报名</button>
+		<div class="mdui-dialog" id="exampleDialog">
+			<div class="mdui-dialog-title">参与内测</div>
+			<div class="mdui-dialog-content">
+				<p>你的身份：
+				<select class="mdui-select" mdui-select>
+					<option value="1">开发者</option>
+					<option value="2">普通用户</option>
+				</select>
+				</p>
+				<div class="mdui-textfield mdui-textfield-floating-label">
+					<label class="mdui-textfield-label">昵称</label>
+					<input class="mdui-textfield-input" type="name"/>
+				</div>
+				<div class="mdui-textfield mdui-textfield-floating-label">
+					<label class="mdui-textfield-label">Email</label>
+					<input class="mdui-textfield-input" type="email"/>
+				</div>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+				<button class="mdui-btn mdui-ripple" id="example-left-top" mdui-dialog-confirm>提交</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var $$ = mdui.JQ;
+		$$('#example-left-top').on('click', function () {
+			mdui.snackbar({
+			message: '提交成功 感谢参与',
+			position: 'left-top'
+			});
+		});
+</script>
+</html>
